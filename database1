@@ -7,7 +7,7 @@ use belanja;
 -- !membuat table Barang
 create table Barang (kdbrng char(10), nmbrng varchar(10), harga int(10), satuan char(10));
 -- ?membuat table pembeli
-create table pembeli (kdp char(10), npm varchar(10), alamat char(10), notlp int(15));
+create table pembeli (kdp char(10), nmp varchar(10), alamat char(10), notlp int(15));
 -- *membuat Transak
 create table Transak (kdtr char(10), kdbrng char(10), kdp char(10), harga int(10), satuan char(10), jumlah int(10), total int(10));
 -- ! isi record barang 
@@ -27,9 +27,9 @@ insert into Transak values('T045','C095','A345','4000','buah','6','24000');
 -- tambhakan record pembeli dan barang
 
 -- ! Barang
-insert into Barang values('A917','Solaso','3000','buah');
+insert into Barang values('A917','Solasi','3000','buah');
 -- ? Pembeli
-nsert into Pembeli values('P044','Duta','Bogor');
+insert into Pembeli values('P044','Duta','Bogor');
 
 
 
@@ -43,7 +43,7 @@ update Transak set satuan='3' where kdtr='T090';
 update Pembeli set notlp='7865436' where npm'Maria';
 
 
--- ! Gk ngerti baca kaliamtnya no 7
+-- ! Gk ngerti baca kalimatnya no 7
 
 
 
@@ -61,19 +61,19 @@ select * from pembeli where alamat like '%a';
 select kdtr, kdp from Transak where total >=10000;
 
 -- ! tampilakan pembeli dan alamat, dimana alamat menampilkan satu kali
-select distinct npm, alamat from Pembeli group by alamat;
+select distinct nmp, alamat from Pembeli group by alamat;
 
 -- * menampilkan semua data barang terurut berdasarkan harga barang kecil ke besar
 select * from Barang ORDER BY harga asc;
 
 --! Tampilkan nama pembeli, alamat, jumlah pembeli yang bertempat tinggal tersebut
-select npm, alamat, count(*) from Pembeli  group by alamat; 
+select nmp, alamat, count(*) from Pembeli  group by alamat; 
 
 -- ! no 15
-select npm, alamat, count(*) from Pembeli group by alamat having count(*)>1;
+select nmp, alamat, count(*) from Pembeli group by alamat having count(*)>1;
 
 -- ! hapuslah semua barang yang memiliki satuan buah
-delete from barang where='buah';
+delete from barang where satuan='buah';
 
 -- ! Hapuslah semua transaksi yang memiliki jumlah pembelian dibawh 10000
 delete from Transak where total <10000;
