@@ -34,7 +34,7 @@ insert into Pembeli values('P044','Duta','Bogor','29348235875');
 
 
 -- ?Tambhakan no hp
-alter table Pembeli ADD nohp int(20);
+alter table Pembeli ADD nohp int(20) after kdp;
 
 -- ubah data 
 -- * mengubah data transak
