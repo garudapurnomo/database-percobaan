@@ -38,7 +38,7 @@ alter table Pembeli ADD nohp int(20) after kdp;
 
 -- ubah data 
 -- * mengubah data transak
-update Transak set satuan='5' where kdtr='T090';
+update Transak set jumlah='5' where kdtr='T090';
 -- ? mengubah no telpn
 update Pembeli set notlp='7865436' where npm='Maria';
 
