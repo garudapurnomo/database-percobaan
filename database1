@@ -40,7 +40,7 @@ alter table Pembeli ADD nohp int(20);
 -- * mengubah data transak
 update Transak set satuan='3' where kdtr='T090';
 -- ? mengubah no telpn
-update Pembeli set notlp='7865436' where npm'Maria';
+update Pembeli set notlp='7865436' where npm='Maria';
 
 
 -- ! Gk ngerti baca kalimatnya no 7
