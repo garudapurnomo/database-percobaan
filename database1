@@ -55,7 +55,7 @@ select nmbrng, harga from Barang where satuan='buah';
 select * from pembeli where alamat='Bogor';
 
 -- !tampilkan kode pembeli, nama dan alamat yang berakhir a
-select * from pembeli where alamat like '%a';
+select * from pembeli where nmp like '%a';
 
 -- !belanja diatas 10000
 select kdtr, kdp from Transak where total >=10000;
