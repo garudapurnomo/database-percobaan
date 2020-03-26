@@ -29,7 +29,7 @@ insert into Transak values('T045','C095','A345','4000','buah','6','24000');
 -- ! Barang
 insert into Barang values('A917','Solasi','3000','buah');
 -- ? Pembeli
-insert into Pembeli values('P044','Duta','Bogor');
+insert into Pembeli values('P044','Duta','Bogor','29348235875');
 
 
 
